@@ -3,6 +3,7 @@ import React from "react";
 import { CSSProp } from "styled-components";
 
 
+
 // array of buttons that will be rendered in the PrimaryNavigation
 const buttons = [
   {
@@ -27,38 +28,14 @@ const buttons = [
   }
 ];
 
-// do the css object for the buttonNav
-const css: CSSProp = {
-  display: "inline-block",
-  marginRight: "1rem",
-  marginLeft: "1rem",
-  padding: "0.5rem 1rem",
-  border: "1px solid #ccc",
-  borderRadius: "0.25rem",
-  fontSize: "1rem",
-  fontWeight: "bold",
-  textDecoration: "none",
-  color: "#333",
-  backgroundColor: "#fff",
-  "&:hover": {
-    backgroundColor: "#eee",
-  }
-};
 
-  
-
-
-// use ButtonNav to do Molecules
-const PrimaryNavigation: React.FC = () => {
-  return (
-    <div className="primary-navigation">
-      {buttons.map((button, index) => {
-        return <ButtonNav key={index} name={button.name} href={button.href} css={css} />;
-      })}
-    </div>
-  );
+// PrimaryNavigation interface
+interface PrimaryNavigationProps {
+  css?: CSSProp;
 }
 
+const PrimaryNavigation = ({ css }: PrimaryNavigationProps) => {
+};
 
 export default PrimaryNavigation;
 

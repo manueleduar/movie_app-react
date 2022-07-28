@@ -5,22 +5,21 @@ import styled, { CSSProp } from "styled-components";
 
 // buttonNav interface
 interface ButtonNavProps {
-  name: string;
-  href: string;
-  active?: boolean;
   css?: CSSProp;
 }
 
 
 // buttonNav component
-const ButtonNav = React.memo(({ name, href, active, css }: ButtonNavProps) => {
-  return (
-    <a className={`nav-link ${active ? "active" : ""}`} aria-current="page" href={href}>
-      {name}
-    </a>
-  );
-}
-);
+export const ButtonNav = styled.button<ButtonNavProps>`
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid #dee2e6;
+  margin: 3px 5px;
+  ${({ css }) => css}
+  &:hover {
+    box-shadow: 6px 6px 13px 2px rgba(0, 0, 0, 0.1);
+  }
+`;
 
 
 

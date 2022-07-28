@@ -7,8 +7,9 @@ import ButtonNav from './atoms/ButtonNav';
 import PrimaryNavigation from './molecules/PrimaryNavigation';
 import moviesService from '../services/moviesService';
 
-console.log('moviesService', moviesService.discoverMovies());
-
+console.log(moviesService.getMovie(675353));
+console.log(moviesService.discoverMovies());
+console.log(moviesService.getPopularMovies());
 
 function App() {
   return (
